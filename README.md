@@ -8,8 +8,8 @@ I like to build the evaluation first, then iterate until the numbers move.
 
 ### 🔍 [RFP Advanced RAG](https://github.com/Yumin-Hwang046/rfp-advanced-rag)
 QA system over 100 public-sector RFP PDFs (~7,500 pages): text, table, and GPT-Vision image parsing, with a hybrid Dense + BM25 retriever.
-- Raised answer accuracy from **70% to 83%** (Naive → Advanced RAG), measured with an LLM-as-a-Judge benchmark
-- Tuned chunking with a grid search over 10 configurations (MRR / Hit@k)
+- Advanced RAG answered questions Naive RAG missed (21 → 25 of 30 under an LLM grader)
+- **Audited my own evaluation**: found grader false positives, an uncapped-MRR artifact behind the "best k", and unanswerable labels. Now building a stricter v2
 - Wrote ~79% of the final codebase in a 5-person team
 
 `LangChain` `FAISS` `BM25` `OpenAI` `Streamlit`
